@@ -31,57 +31,66 @@
 
 <body>
 
-  <header class="p-3 bg-dark text-white">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark p-3">
     <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="#" class="fs-4 me-3 d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          Tara Mathers
-        </a>
 
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#about" class="nav-link px-2 text-white">About</a></li>
-          <li><a href="#projects" class="nav-link px-2 text-white">Projects</a></li>
-          <li><a href="#connect" class="nav-link px-2 text-white">Connect</a></li>
+      <a href="#" class="fs-4 me-3 d-flex align-items-center text-primary text-decoration-none 
+          fw-bold primary-to-secondary">
+        Tara Mathers
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li><a href="#about" class="nav-item text-secondary">About</a></li>
+          <li><a href="#projects" class="nav-item px-2 text-secondary">Projects</a></li>
+          <li><a href="#connect" class="nav-item px-2 text-secondary">Connect</a></li>
         </ul>
       </div>
     </div>
-  </header>
+  </nav>
 
   <!-- Main -->
-  <div class="container col-xxl-8 px-4 py-5 bg-primary">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="col-12 col-sm-8 col-lg-6">
-        <img src="images/tara.jpg" class="d-block mx-lg-auto img-fluid" alt="headshot" loading="lazy" width="400" height="400">
-      </div>
-      <div class="col-lg-6">
-        <h1 class="display-4 fw-bold lh-1 mb-3">Tara Mathers</h1>
-        <p class="col-lg-10 fs-4">Tech Entrepreneur, Software Architect & Full-Stack Developer</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <a href="#projects" class="btn btn-secondary btn-lg px-4 me-md-2">Projects</a>
-          <a href="#connect" class="btn btn-outline-secondary btn-lg px-4">Connect</a>
+  <div class=" bg-primary primary-to-secondary-bg">
+    <div class="container col-xxl-8 px-4 py-5 ">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-12 col-sm-8 col-lg-6">
+          <img src="images/tara.jpg" class="d-block mx-lg-auto img-fluid border border-2 border-warning rounded-border" alt="headshot" loading="lazy" width="400" height="400">
         </div>
+        <div class="col-lg-6">
+          <h1 class="display-4 fw-bold lh-1 mb-3 warning-to-dark">Tara Mathers</h1>
+          <p class="col-lg-10 fs-4 mb-4">Tech Entrepreneur, Software Architect & Full-Stack Developer</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="#projects" class="btn btn-warning btn-lg px-4 me-md-2">Projects</a>
+            <a href="#connect" class="btn btn-outline-warning btn-lg px-4">Connect</a>
+          </div>
+        </div>
+        
       </div>
-      
     </div>
   </div>
 
   <!-- About -->
-  <div class="px-4 py-5 text-center bg-info text-primary" id="about">
-    <h1 class="display-5 fw-bold">About Me</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">My name's Tara and I'm a software developer from Halifax, Nova Scotia and I've spent over a 
-        decade building software solutions professionally. I've worked for startups and big tech companies alike 
-        and worked with languages such as Java, C++, Node, and ReactJS, to name a few. When I'm not coding,
-        you can find me running, snowboarding, paddleboarding, or spending time with my three beautiful kitties.
-      </p>
+  <div class="px-4 py-5 text-center bg-info text-light" id="about">
+    <div class="py-5">
+      <h1 class="display-5 fw-bold light-to-secondary">About Me</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">My name's Tara and I'm a software developer from Halifax, Nova Scotia and I've spent over a 
+          decade building software solutions professionally. I've worked for startups and big tech companies alike 
+          and I've even built a few social networks of my own. When I'm not coding,
+          you can find me running, snowboarding, paddleboarding, or spending time with my three beautiful kitties.
+        </p>
+      </div>
     </div>
   </div>
 
   <!-- Projects -->
   <div class="album py-5 bg-secondary" id="projects">
-    <div class="container py-3">
+    <div class="container py-5">
 
-      <h1 class="display-5 fw-bold mb-5 text-center">Projects</h1>
+      <h1 class="display-5 fw-bold mb-5 text-center warning-to-dark">Projects</h1>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
 
         <!-- Snowflakes -->
@@ -97,8 +106,8 @@
                   <span class="badge badge-rounded text-bg-secondary">JavaScript</span>
               </div>
               <div class="btn-group">
-                <a href="https://tmathers.github.io/snowflakes/" class="btn btn-sm btn-outline-secondary">View</a>
-                <a href="https://github.com/tmathers/snowflakes" class="btn btn-sm btn-outline-secondary">Code</a>
+                <a href="https://tmathers.github.io/snowflakes/" class="btn btn-sm btn-outline-warning">View</a>
+                <a href="https://github.com/tmathers/snowflakes" class="btn btn-sm btn-outline-warning">Code</a>
               </div>
               <small class="text-muted float-end">2022</small>
             </div>
@@ -120,7 +129,7 @@
                 <span class="badge badge-rounded text-bg-secondary">MySQL</span>
               </div>
               <div class="btn-group">
-                <a href="https://kayr.ca"  class="btn btn-sm btn-outline-secondary">View</a>
+                <a href="https://kayr.ca"  class="btn btn-sm btn-outline-warning">View</a>
               </div>
               <small class="text-muted float-end">2021</small>
             </div>
@@ -134,15 +143,15 @@
             <img src="images/ctrader.png" class="bd-placeholder-img card-img-top" width="100%" aria-label="Thumbnail" />
 
             <div class="card-body">
-              <h5 class="card-title">ctrader</h5>
-              <p class="card-text">A command-line tool for automation of crypto trading on Binance.</p>
+              <h5 class="card-title">cTrader</h5>
+              <p class="card-text">A command-line tool for automating crypto trading on Binance.</p>
               <div class="mb-3">
                 <span class="badge badge-rounded text-bg-secondary">Python</span>
                 <span class="badge badge-rounded text-bg-secondary">Pandas</span>
                 <span class="badge badge-rounded text-bg-secondary">SQLAlchemy</span>
               </div>
               <div class="btn-group">
-                <a href="https://github.com/tmathers/ctrader"  class="btn btn-sm btn-outline-secondary">Code</a>
+                <a href="https://github.com/tmathers/ctrader"  class="btn btn-sm btn-outline-warning">Code</a>
               </div>
               <small class="text-muted float-end">2021</small>
             </div>
@@ -162,8 +171,8 @@
                 <span class="badge badge-rounded text-bg-secondary">Unity</span>
               </div>
               <div class="btn-group">
-                <a href=""  class="btn btn-sm btn-outline-secondary">Download</a>
-                <a href=""  class="btn btn-sm btn-outline-secondary">Code</a>
+                <a href=""  class="btn btn-sm btn-outline-warning">Download</a>
+                <a href=""  class="btn btn-sm btn-outline-warning">Code</a>
               </div>
               <small class="text-muted float-end">2019</small>
             </div>
@@ -183,8 +192,8 @@
                 <span class="badge badge-rounded text-bg-secondary">JavaScript</span>
               </div>
               <div class="btn-group">
-                <a href="https://tmathers.github.io/JuliaSetViewer/"  class="btn btn-sm btn-outline-secondary">View</a>
-                <a href="https://github.com/tmathers/JuliaSetViewer"  class="btn btn-sm btn-outline-secondary">Code</a>
+                <a href="https://tmathers.github.io/JuliaSetViewer/"  class="btn btn-sm btn-outline-warning">View</a>
+                <a href="https://github.com/tmathers/JuliaSetViewer"  class="btn btn-sm btn-outline-warning">Code</a>
               </div>
               <small class="text-muted float-end">2010</small>
             </div>
@@ -222,7 +231,7 @@
   <!-- Connect -->
   <div class="bg-warning text-light px-4 py-5 text-center" id="connect">
     <div class="py-5">
-      <h1 class="display-5 fw-bold text-primary">Connect</h1>
+      <h1 class="display-5 fw-bold text-primary primary-to-secondary">Connect</h1>
       <div class="col-lg-6 mx-auto">
         <p class="fs-5 mb-4 text-primary" >Connect with me on any of these platforms:</p>
         <div class="d-grid gap-4 d-sm-flex justify-content-sm-center">
@@ -235,7 +244,7 @@
   </div>
   <footer class="footer mt-auto py-3 bg-dark ">
     <div class="container py-5 text-center">
-      <span class="text-secondary">© 2022 Tara Mathers</span>
+      <span class="text-secondary opacity-75">© 2022 Tara Mathers</span>
     </div>
   </footer>
 
