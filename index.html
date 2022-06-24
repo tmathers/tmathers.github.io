@@ -59,7 +59,7 @@
   </div>
 
   <!-- About -->
-  <div class="px-4 py-5 text-center">
+  <div class="px-4 py-5 text-center" id="about">
     <h1 class="display-5 fw-bold">About Me</h1>
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">My name's Tara and I'm a software developer from Halifax, Nova Scotia and I've spent over a 
@@ -71,10 +71,119 @@
   </div>
 
   <!-- Projects -->
-  <div class="album py-5 bg-light">
+  <div class="album py-5 bg-light" id="projects">
     <div class="container">
-
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        <!-- Snowflakes -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/snowflake.png" class="bd-placeholder-img card-img-top" width="100%" aria-label="Thumbnail" />
+
+            <div class="card-body">
+              <h5 class="card-title">Snowflake Generator</h5>
+              <p class="card-text">Create a new fractally generated snowflake on every page load.</p>
+              <div class="mb-3">
+                  <span class="badge badge-rounded text-bg-secondary">HTML5</span>
+                  <span class="badge badge-rounded text-bg-secondary">JavaScript</span>
+              </div>
+              <div class="btn-group">
+                <a href="https://tmathers.github.io/snowflakes/" class="btn btn-sm btn-outline-secondary">View</a>
+                <a href="https://github.com/tmathers/snowflakes" class="btn btn-sm btn-outline-secondary">Code</a>
+              </div>
+              <small class="text-muted float-end">2022</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- KAYR -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/kayr.png" class="bd-placeholder-img card-img-top" width="100%" aria-label="Thumbnail" />
+
+            <div class="card-body">
+              <p class="card-title">KAYR</p>
+              <p class="card-text"></p>
+              <div class="mb-3">
+                <span class="badge badge-rounded text-bg-secondary">PHP</span>
+                <span class="badge badge-rounded text-bg-secondary">Laravel</span>
+                <span class="badge badge-rounded text-bg-secondary">ReactJS</span>
+                <span class="badge badge-rounded text-bg-secondary">MySQL</span>
+              </div>
+              <div class="btn-group">
+                <a href="https://kayr.ca"  class="btn btn-sm btn-outline-secondary">View</a>
+              </div>
+              <small class="text-muted float-end">2021</small>
+            </div>
+          </div>
+        </div>
+   
+
+        <!-- cTrader -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/ctrader.png" class="bd-placeholder-img card-img-top" width="100%" aria-label="Thumbnail" />
+
+            <div class="card-body">
+              <p class="card-title">ctrader</p>
+              <p class="card-text">A command-line tool for automation of crypto trading on Binance.</p>
+              <div class="mb-3">
+                <span class="badge badge-rounded text-bg-secondary">Python</span>
+                <span class="badge badge-rounded text-bg-secondary">Pandas</span>
+                <span class="badge badge-rounded text-bg-secondary">SQLAlchemy</span>
+              </div>
+              <div class="btn-group">
+                <a href="https://github.com/tmathers/ctrader"  class="btn btn-sm btn-outline-secondary">Code</a>
+              </div>
+              <small class="text-muted float-end">2021</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat Game -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/catGame.png" class="bd-placeholder-img card-img-top" width="100%" aria-label="Thumbnail" />
+
+            <div class="card-body">
+              <p class="card-title">Cat Game</p>
+              <p class="card-text">A mobile game for cats to play using a tablet. See how many times your cat can catch the mouse.</p>
+              <div class="mb-3">
+                <span class="badge badge-rounded text-bg-secondary">C#</span>
+                <span class="badge badge-rounded text-bg-secondary">Unity</span>
+              </div>
+              <div class="btn-group">
+                <a href=""  class="btn btn-sm btn-outline-secondary">Download</a>
+                <a href=""  class="btn btn-sm btn-outline-secondary">Code</a>
+              </div>
+              <small class="text-muted float-end">2019</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Julia -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/julia.png" class="bd-placeholder-img card-img-top" width="100%" aria-label="Thumbnail" />
+
+            <div class="card-body">
+              <p class="card-title">Julia Set Viewer</p>
+              <p class="card-text">View the Julia set for the selected <code>&lt;c&gt;</code> value of the selected point on the Mandelbrot set. Mouse over the Mandelbrot image to change the value.</p>
+              <div class="mb-3">
+                <span class="badge badge-rounded text-bg-secondary">HTML5</span>
+                <span class="badge badge-rounded text-bg-secondary">JavaScript</span>
+              </div>
+              <div class="btn-group">
+                <a href="https://tmathers.github.io/JuliaSetViewer/"  class="btn btn-sm btn-outline-secondary">View</a>
+                <a href="https://github.com/tmathers/JuliaSetViewer"  class="btn btn-sm btn-outline-secondary">Code</a>
+              </div>
+              <small class="text-muted float-end">2010</small>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Template
         <div class="col">
           <div class="card shadow-sm">
             <img src="" class="bd-placeholder-img card-img-top" width="100%" aria-label="Thumbnail" />
@@ -82,70 +191,21 @@
             <div class="card-body">
               <p class="card-title"></p>
               <p class="card-text"></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <span class=""></span>
-                </div>
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Code</button>
-                </div>
-                <small class="text-muted"></small>
+              <div class="mb-3">
+                <span class="badge badge-rounded text-bg-secondary"></span>
+                <span class="badge badge-rounded text-bg-secondary"></span>
               </div>
+              <div class="btn-group">
+                <a href=""  class="btn btn-sm btn-outline-secondary">View</a>
+                <a href=""  class="btn btn-sm btn-outline-secondary">Code</a>
+              </div>
+              <small class="text-muted float-end"></small>
             </div>
           </div>
         </div>
-
-
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
+         -->
+        
+        
       </div>
     </div>
   </div>
