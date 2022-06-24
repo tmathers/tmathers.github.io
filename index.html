@@ -23,6 +23,7 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
   <link rel="stylesheet" href="/assets/css/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Tara Mathers" />
 </head>
@@ -32,7 +33,7 @@
   <header class="p-3 bg-dark text-white">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <a href="#" class="fs-4 me-3 d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
           Tara Mathers
         </a>
 
@@ -46,7 +47,7 @@
   </header>
 
   <!-- Main -->
-  <div class="container col-xxl-8 px-4 py-5">
+  <div class="container col-xxl-8 px-4 py-5 bg-primary">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
         <img src="images/tara.jpg" class="d-block mx-lg-auto img-fluid" alt="headshot" loading="lazy" width="700" height="500">
@@ -59,7 +60,7 @@
   </div>
 
   <!-- About -->
-  <div class="px-4 py-5 text-center" id="about">
+  <div class="px-4 py-5 text-center bg-info text-light" id="about">
     <h1 class="display-5 fw-bold">About Me</h1>
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">My name's Tara and I'm a software developer from Halifax, Nova Scotia and I've spent over a 
@@ -71,8 +72,10 @@
   </div>
 
   <!-- Projects -->
-  <div class="album py-5 bg-light" id="projects">
+  <div class="album py-5" id="projects">
     <div class="container">
+
+      <h1 class="display-5 fw-bold mb-4 text-center">Projects</h1>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
         <!-- Snowflakes -->
@@ -102,8 +105,9 @@
             <img src="images/kayr.png" class="bd-placeholder-img card-img-top" width="100%" aria-label="Thumbnail" />
 
             <div class="card-body">
-              <p class="card-title">KAYR</p>
-              <p class="card-text"></p>
+              <h5 class="card-title">KAYR</h5>
+              <p class="card-text">A platform for student unions to help folks get involved in school life. From finding 
+                events & joining societies to peer help & more, we are an online student hub, with a centralized suite of tools for student unions to create and manage an active, vibrant & supportive student body.</p>
               <div class="mb-3">
                 <span class="badge badge-rounded text-bg-secondary">PHP</span>
                 <span class="badge badge-rounded text-bg-secondary">Laravel</span>
@@ -125,7 +129,7 @@
             <img src="images/ctrader.png" class="bd-placeholder-img card-img-top" width="100%" aria-label="Thumbnail" />
 
             <div class="card-body">
-              <p class="card-title">ctrader</p>
+              <h5 class="card-title">ctrader</h5>
               <p class="card-text">A command-line tool for automation of crypto trading on Binance.</p>
               <div class="mb-3">
                 <span class="badge badge-rounded text-bg-secondary">Python</span>
@@ -146,7 +150,7 @@
             <img src="images/catGame.png" class="bd-placeholder-img card-img-top" width="100%" aria-label="Thumbnail" />
 
             <div class="card-body">
-              <p class="card-title">Cat Game</p>
+              <h5 class="card-title">Cat Game</h5>
               <p class="card-text">A mobile game for cats to play using a tablet. See how many times your cat can catch the mouse.</p>
               <div class="mb-3">
                 <span class="badge badge-rounded text-bg-secondary">C#</span>
@@ -167,7 +171,7 @@
             <img src="images/julia.png" class="bd-placeholder-img card-img-top" width="100%" aria-label="Thumbnail" />
 
             <div class="card-body">
-              <p class="card-title">Julia Set Viewer</p>
+              <h5 class="card-title">Julia Set Viewer</h5>
               <p class="card-text">View the Julia set for the selected <code>&lt;c&gt;</code> value of the selected point on the Mandelbrot set. Mouse over the Mandelbrot image to change the value.</p>
               <div class="mb-3">
                 <span class="badge badge-rounded text-bg-secondary">HTML5</span>
@@ -211,21 +215,22 @@
   </div>
 
   <!-- Connect -->
-  <div class="bg-dark text-secondary px-4 py-5 text-center">
+  <div class="bg-secondary text-light px-4 py-5 text-center">
     <div class="py-5">
       <h1 class="display-5 fw-bold text-white">Connect</h1>
       <div class="col-lg-6 mx-auto">
-        <p class="fs-5 mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Custom button</button>
-          <button type="button" class="btn btn-outline-light btn-lg px-4">Secondary</button>
+        <p class="fs-5 mb-4">Connect with me on any of these platforms.</p>
+        <div class="d-grid gap-4 d-sm-flex justify-content-sm-center">
+          <a href="" class="display-4 bi bi-linkedin"></a>
+          <a href="" class="display-4 bi bi-github"></a>
+          <a href="" class="display-4 bi bi-stack-overflow"></a>
         </div>
       </div>
     </div>
   </div>
-  <footer class="footer mt-auto py-3 bg-light">
+  <footer class="footer mt-auto py-3 bg-dark text-light">
     <div class="container py-5 text-center">
-      <span class="text-muted">© 2022 Tara Mathers</span>
+      <span class="text-light">© 2022 Tara Mathers</span>
     </div>
   </footer>
 
