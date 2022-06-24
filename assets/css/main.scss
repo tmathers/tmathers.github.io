@@ -1,0 +1,76 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+
+// Default variable overrides
+
+
+// https://coolors.co/30343f-fafaff-e4d9ff-273469-1e2749
+
+
+$primary:       #edd0f0;
+//$primary:       #d7d8f3;
+$secondary:     #c0c1f1;
+$warning:       #37457c;
+$success:       #1E2749;
+$info:          #373e52;
+
+$light:         #F0EFF4;
+$dark:          #1E2749;
+
+.primary-to-secondary-bg {
+  background: linear-gradient(to right, $primary, $secondary);
+}
+
+.light-to-primary {
+  background: linear-gradient(to right, $light, $primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light-to-secondary {
+  background: linear-gradient(to right, $light, $secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.primary-to-secondary {
+  background: linear-gradient(to right, $primary, $secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.success-to-dark {
+  background: linear-gradient(to right, $success, $warning);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+$body-bg: $primary;
+$body-color: $dark;
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+
+// Required
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// Optional Bootstrap components here
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+// etc
+
+
+
