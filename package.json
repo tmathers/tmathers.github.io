@@ -1,0 +1,26 @@
+{
+  "name": "tmathers.github.io",
+  "version": "1.0.0",
+  "description": "Tara Mathers's portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmathers/tmathers.github.io.git"
+  },
+  "author": "Tara Mathers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmathers/tmathers.github.io/issues"
+  },
+  "homepage": "https://github.com/tmathers/tmathers.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.0-beta1"
+  },
+  "devDependencies": {
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
