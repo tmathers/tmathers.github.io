@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en"><head>
   <meta charset="utf-8">
@@ -18,7 +20,7 @@
   <meta property="og:locale" content="en_US" />
   <meta name="description" content="" />
   <meta property="og:description" content="Portfolio" />
-  <link rel="canonical" href="https://taramathers.com" />
+  <link rel="canonical" href="https://taramathers.com" /> 
   <meta property="og:url" content="https://taramathers.com" />
   <meta property="og:site_name" content="Tara Mathers" />
   <meta property="og:type" content="website" />
@@ -31,6 +33,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
 
   <link rel="stylesheet" href="/assets/css/main.css"><link type="application/atom+xml" rel="alternate" href="https://taramathers.com/feed.xml" title="Tara Mathers" />
 </head>
@@ -104,154 +107,57 @@
       <h1 class="display-5 fw-bold mb-5 text-center success-to-dark">Projects</h1>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
 
-        <!-- Snowflakes -->
-        <div class="col">
-          <div class="card shadow-sm bg-light">
-            <img src="images/snowflake.png" class="bd-placeholder-img card-img-top" width="100%" aria-label="Thumbnail" />
 
-            <div class="card-body">
-              <h5 class="card-title">Snowflake Generator</h5>
-              <p class="card-text">Create a new fractally generated snowflake on every page load.</p>
-              <div class="mb-3">
-                  <span class="badge badge-rounded text-bg-secondary">HTML5</span>
-                  <span class="badge badge-rounded text-bg-secondary">JavaScript</span>
+        {% for project in site.data.projects %}
+          <div class="col">
+            <div class="card shadow-sm  bg-light">
+
+
+              <div id="carousel-{{forloop.index}}" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  
+                  {% for image in project.images %}
+                    {% assign classes = "" %}
+                    {% if forloop.index == 1 %}
+                      <div class="carousel-item active" data-bs-interval="10000">
+                    {% else %}
+                    <div class="carousel-item " data-bs-interval="10000">
+                    {% endif %}
+                    
+                      <img src="{{ image }}" class="bd-placeholder-img card-img-top w-100" aria-label="Thumbnail" />
+                    </div>
+                  {% endfor %}
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-{{forloop.index}}" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel-{{forloop.index}}" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
-              <div class="btn-group">
-                <a href="https://tmathers.github.io/snowflakes/" class="btn btn-sm btn-outline-warning">View</a>
-                <a href="https://github.com/tmathers/snowflakes" class="btn btn-sm btn-outline-warning">Code</a>
+
+
+              <div class="card-body">
+                <h5 class="card-title">{{ project.name }}</h5>
+                <p class="card-text">{{ project.description }}</p>
+                <div class="mb-3">
+                  {% for tag in project.tags %}
+                    <span class="badge badge-rounded text-bg-secondary">{{ tag }}</span>
+                  {% endfor %}
+                </div>
+                <div class="btn-group">
+                  {% for link in project.links %}
+                    <a href="{{ link.url }}"  class="btn btn-sm btn-outline-warning">{{ link.text }}</a>
+                  {% endfor %}
+                </div>
+                <small class="text-muted float-end">{{ project.year }}</small>
               </div>
-              <small class="text-muted float-end">2022</small>
             </div>
           </div>
-        </div>
-
-        <!-- KAYR -->
-        <div class="col">
-          <div class="card shadow-sm  bg-light">
-            <img src="images/kayr.png" class="bd-placeholder-img card-img-top" width="100%" aria-label="Thumbnail" />
-
-            <div class="card-body">
-              <h5 class="card-title">KAYR</h5>
-              <p class="card-text">A platform for student unions to help folks get involved in school life. Manage events, societies, and more.</p>
-              <div class="mb-3">
-                <span class="badge badge-rounded text-bg-secondary">PHP</span>
-                <span class="badge badge-rounded text-bg-secondary">Laravel</span>
-                <span class="badge badge-rounded text-bg-secondary">ReactJS</span>
-                <span class="badge badge-rounded text-bg-secondary">MySQL</span>
-              </div>
-              <div class="btn-group">
-                <a href="https://kayr.ca"  class="btn btn-sm btn-outline-warning">View</a>
-              </div>
-              <small class="text-muted float-end">2021</small>
-            </div>
-          </div>
-        </div>
-   
-
-        <!-- cTrader -->
-        <div class="col">
-          <div class="card shadow-sm  bg-light">
-            <img src="images/ctrader.png" class="bd-placeholder-img card-img-top" width="100%" aria-label="Thumbnail" />
-
-            <div class="card-body">
-              <h5 class="card-title">cTrader</h5>
-              <p class="card-text">A command-line tool for automating crypto trading on Binance.</p>
-              <div class="mb-3">
-                <span class="badge badge-rounded text-bg-secondary">Python</span>
-                <span class="badge badge-rounded text-bg-secondary">Pandas</span>
-                <span class="badge badge-rounded text-bg-secondary">SQLAlchemy</span>
-              </div>
-              <div class="btn-group">
-                <a href="https://github.com/tmathers/ctrader"  class="btn btn-sm btn-outline-warning">Code</a>
-              </div>
-              <small class="text-muted float-end">2021</small>
-            </div>
-          </div>
-        </div>
-
-        <!--Infodemic -->
-        <div class="col">
-          <div class="card shadow-sm  bg-light">
-            <img src="images/infodemic.png" class="bd-placeholder-img card-img-top" width="100%" aria-label="Thumbnail" />
-
-            <div class="card-body">
-              <h5 class="card-title">Infodemic</h5>
-              <p class="card-text">A tool to help combat the spread of misinformation.</p>
-              <div class="mb-3">
-                <span class="badge badge-rounded text-bg-secondary">PHP</span>
-              </div>
-              <div class="btn-group">
-                <a href="https://infodemic.taramathers.com"  class="btn btn-sm btn-outline-warning">View</a>
-              </div>
-              <small class="text-muted float-end">2020</small>
-            </div>
-          </div>
-        </div>
-
-        <!-- Cat Game -->
-        <div class="col">
-          <div class="card shadow-sm  bg-light">
-            <img src="images/catGame.png" class="bd-placeholder-img card-img-top" width="100%" aria-label="Thumbnail" />
-
-            <div class="card-body">
-              <h5 class="card-title">Cat Game</h5>
-              <p class="card-text">A mobile game for cats to play using a tablet. See how many times your cat can catch the mouse.</p>
-              <div class="mb-3">
-                <span class="badge badge-rounded text-bg-secondary">C#</span>
-                <span class="badge badge-rounded text-bg-secondary">Unity</span>
-              </div>
-              <div class="btn-group">
-                <a href="files/catGame.aab" class="btn btn-sm btn-outline-warning">Download</a>
-              </div>
-              <small class="text-muted float-end">2019</small>
-            </div>
-          </div>
-        </div>
-
-        <!-- Julia -->
-        <div class="col">
-          <div class="card shadow-sm  bg-light">
-            <img src="images/julia.png" class="bd-placeholder-img card-img-top" width="100%" aria-label="Thumbnail" />
-
-            <div class="card-body">
-              <h5 class="card-title">Julia Set Viewer</h5>
-              <p class="card-text">View the Julia set for the selected <code>c</code> value of the selected point on the Mandelbrot set. Mouse over the Mandelbrot image to change the value.</p>
-              <div class="mb-3">
-                <span class="badge badge-rounded text-bg-secondary">HTML5</span>
-                <span class="badge badge-rounded text-bg-secondary">JavaScript</span>
-              </div>
-              <div class="btn-group">
-                <a href="https://tmathers.github.io/JuliaSetViewer/"  class="btn btn-sm btn-outline-warning">View</a>
-                <a href="https://github.com/tmathers/JuliaSetViewer"  class="btn btn-sm btn-outline-warning">Code</a>
-              </div>
-              <small class="text-muted float-end">2010</small>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- Template
-        <div class="col">
-          <div class="card shadow-sm  bg-light">
-            <img src="" class="bd-placeholder-img card-img-top" width="100%" aria-label="Thumbnail" />
-
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-              <p class="card-text"></p>
-              <div class="mb-3">
-                <span class="badge badge-rounded text-bg-secondary"></span>
-                <span class="badge badge-rounded text-bg-secondary"></span>
-              </div>
-              <div class="btn-group">
-                <a href=""  class="btn btn-sm btn-outline-warning">View</a>
-                <a href=""  class="btn btn-sm btn-outline-warning">Code</a>
-              </div>
-              <small class="text-muted float-end"></small>
-            </div>
-          </div>
-        </div>
-         -->
-        
+        {% endfor %}
         
       </div>
     </div>
@@ -272,9 +178,9 @@
     </div>
   </div>
   <footer class="footer mt-auto py-3 bg-dark ">
-    <div class="container py-5 text-center small text-secondary opacity-75 ">
-      <p class=" mb-4">© 2022 Tara Mathers.</p>
-      <p class="mb-2">Designed with <a href="https://getbootstrap.com/">Bootstrap</a>.</p>
+    <div class="container py-5 text-center small text-secondary opacity-50 ">
+      <p class=" mb-5">© 2022 Tara Mathers.</p>
+      <p class="mb-1">Designed with <a href="https://getbootstrap.com/">Bootstrap</a>.</p>
       <p class="mb-0">Hosted with <a href="https://pages.github.com">Github Pages</a>.</p>
     </div>
   </footer>

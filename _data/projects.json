@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Snowflake Generator",
+    "description": "Create a new fractally generated snowflake on every page load.",
+    "images": [
+      "images/snowflake.png",
+      "images/snowflake2.png",
+      "images/snowflake3.png",
+      "images/snowflake4.png"
+    ],
+    "tags": ["HTML5", "JavaScript"],
+    "links": [
+      {"text": "View", "url": "https://tmathers.github.io/snowflakes/"},
+      {"text": "Code", "url": "https://github.com/tmathers/snowflakes"}
+    ],
+    "year": 2022
+  },
+  {
+    "name": "KAYR",
+    "description": "A platform for student unions to help folks get involved in school life. Manage events, societies, and more.",
+    "images": [
+      "images/kayr5.png",
+      "images/kayr.png",
+      "images/kayr6.png"
+    ],
+    "tags": ["PHP", "Laravel", "ReactJS", "MySQL"],
+    "links": [
+      {"text": "View", "url": "https://kayr.ca/"}
+    ],
+    "year": 2021
+  },
+  {
+    "name": "cTrader",
+    "description": "A command-line tool for automating crypto trading on Binance.",
+    "images": [
+      "images/ctrader.png"
+    ],
+    "tags": ["Python", "Pandas", "SQLAlchemy"],
+    "links": [
+      {"text": "Code", "url": "https://github.com/tmathers/ctrader"}
+    ],
+    "year": 2021
+  },
+  {
+    "name": "Infodemic",
+    "description": "A tool to help combat the spread of misinformation.",
+    "images": [
+      "images/infodemic.png",
+      "images/infodemic2.png",
+      "images/infodemic3.png"
+    ],
+    "tags": ["PHP"],
+    "links": [
+      {"text": "View", "url": "https://infodemic.taramathers.com/"}
+    ],
+    "year": 2020
+  },
+  {
+    "name": "Cat Game",
+    "description": "A mobile game for cats to play using a tablet. See how many times your cat can catch the mouse.",
+    "images": [
+      "images/catGame.png"
+    ],
+    "tags": ["C#", "Unity"],
+    "links": [
+      {"text": "Download", "url": "files/catGame.aab"}
+    ],
+    "year": 2019
+  },
+  {
+    "name": "Julia Set Viewer",
+    "description": "View the Julia set for the selected <code>c</code> value on the Mandelbrot set. Mouse over the Mandelbrot image to change the value.",
+    "images": [
+      "images/julia.png",
+      "images/julia2.png"
+    ],
+    "tags": ["HTML5", "JavaScript"],
+    "links": [
+      {"text": "View", "url": "https://tmathers.github.io/JuliaSetViewer/"},
+      {"text": "Code", "url": "https://github.com/tmathers/JuliaSetViewer"}
+    ],
+    "year": 2010
+  }
+]

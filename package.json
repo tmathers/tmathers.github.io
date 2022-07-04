@@ -4,7 +4,14 @@
   "description": "Tara Mathers's portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "dev": "cross-env NODE_ENV=development webpack",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "jekyll:watch": "bundle exec jekyll build --watch --incremental",
+    "jekyll:build": "bundle exec jekyll build",
+    "serve": "browser-sync start --config browser-sync.js",
+    "start": "npm run jekyll:watch & npm run serve",
+    "watch": "cross-env NODE_ENV=development webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -17,13 +24,27 @@
   },
   "homepage": "https://github.com/tmathers/tmathers.github.io#readme",
   "dependencies": {
-    "bootstrap": "^5.2.0-beta1"
+    "bootstrap": "^5.2.0-beta1",
+    "html-webpack-plugin": "^5.5.0",
+    "vue": "^3.2.37"
   },
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "sass": "^1.53.0",
+    "sass-loader": "^13.0.2",
+    "vue-loader": "^17.0.0",
+    "vue-style-loader": "^4.1.3",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0"
   },
   "sass": {
-    "includePaths": ["./node_modules"]
+    "includePaths": [
+      "./node_modules"
+    ]
   }
 }
