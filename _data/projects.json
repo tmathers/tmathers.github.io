@@ -16,6 +16,20 @@
     "year": 2022
   },
   {
+    "name": "One4Earth",
+    "description": "A social network where climate activists can share projects and connect with others in the climate action space.",
+    "images": [
+      "images/one4earth4.png",
+      "images/one4earth5.png",
+      "images/one4earth6.png"
+    ],
+    "tags": ["PHP", "Laravel", "MySQL"],
+    "links": [
+      {"text": "View", "url": "https://climatesolvers.com/"}
+    ],
+    "year": 2022
+  },
+  {
     "name": "KAYR",
     "description": "A platform for student unions to help folks get involved in school life. Manage events, societies, and more.",
     "images": [
